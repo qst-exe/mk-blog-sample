@@ -3,7 +3,7 @@ import {Content, SpearlyApiClient} from "@spearly/sdk-js";
 
 const apiClient = new SpearlyApiClient(process.env.API_KEY as string)
 export default async function Page({ params }: { params: { id: string } }) {
-  const content = await apiClient.getContent(params.id)
+  const content = await apiClient.getContent("sample-post", params.id)
   const values= content.values as any;
 
   return (
