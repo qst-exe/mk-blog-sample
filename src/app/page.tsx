@@ -17,7 +17,7 @@ export default async function Home() {
               const path = `/blog/${content.attributes.publicUid}`
 
               return (
-                <li key={content.id}>
+                <li className={styles.articleList} key={content.id}>
                   <Link href={path}>
                       {values.title}
                   </Link>
